@@ -8,12 +8,14 @@ public class EnemyManager : MonoBehaviour
 	public GameObject enemy;                // The enemy prefab to be spawned.
 	public float spawnTime = 10f;            // How long between each spawn.
 	public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
+	public Transform goal;
 
 
 	void Start ()
 	{
 		// Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
 		InvokeRepeating ("Spawn", spawnTime, spawnTime);
+		enemy.GetComponent<Enemy> ().goal = goal;
 	}
 
 
@@ -30,6 +32,6 @@ public class EnemyManager : MonoBehaviour
 		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
 		// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-		Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+		GameObject tempEnemy = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 	}
 }

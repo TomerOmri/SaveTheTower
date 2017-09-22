@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 	//Shoot function is IEnumerator so we can delay for seconds
 	IEnumerator Shoot() {
 		isShooting = true;
+		//make a bullet
 		GameObject bullet = Instantiate(_bullet,spawnPoint.transform.position,spawnPoint.transform.rotation);
 		Rigidbody rb = bullet.GetComponent<Rigidbody>();
 		//add force to the bullet in the direction of the spawnPoint's forward vector
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour {
 	}
 		
 	void Update () {
+		Debug.DrawRay(spawnPoint.transform.position, spawnPoint.transform.forward, Color.green);
 		if (Input.anyKeyDown) {
 			if (!isShooting) {
 				StartCoroutine ("Shoot");

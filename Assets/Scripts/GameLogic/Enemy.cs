@@ -8,11 +8,14 @@ public class Enemy: MonoBehaviour{
 	protected int Power;
 	protected int Speed;
 	public bool isDead{ get; set; }
-	/*[SerializeField] private*/public Transform goal;
+	public Transform goal;
 	public bool isOnFans = false;
+	private Animator anim;
 
 
 	void Start () {
+		anim = GetComponent<Animator> ();
+		anim.SetBool ("isOnFance", isOnFans);
 		NavMeshAgent agent = GetComponent<NavMeshAgent>();
 		agent.destination = goal.position;
 		agent.speed = 1f;
@@ -39,5 +42,11 @@ public class Enemy: MonoBehaviour{
 
 	void OnTriggerEnter(Collider col){
 		//need to check if this is the fans or the arrow
+		if (col.transform.name == "fance") {
+			isOnFans = true;
+			StopMovement ();
+			anim.SetBool ("isOnFance", isOnFans);
+			//GetComponent<Animation>()
+		}
 	}
 }
