@@ -24,8 +24,10 @@ public class Player : MonoBehaviour {
 		//play the gun shot sound and gun animation
 		//GetComponent<AudioSource>().Play ();
 		gun.GetComponent<Animation>().Play ();
-		//destroy the bullet after 1 second
-		Destroy (bullet, 1);
+		//destroy the bullet after 1 second if didn't destroied yet
+		if (bullet) {
+			Destroy (bullet, 1);
+		}
 		//wait for 1 second and set isShooting to false so we can shoot again
 		yield return new WaitForSeconds (1f);
 		isShooting = false;

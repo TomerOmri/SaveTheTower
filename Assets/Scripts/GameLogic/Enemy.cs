@@ -13,12 +13,13 @@ public class Enemy: MonoBehaviour{
 	private Animator anim;
 
 
-	void Start () {
+	void Awake () {
 		anim = GetComponent<Animator> ();
 		anim.SetBool ("isOnFance", isOnFans);
 		NavMeshAgent agent = GetComponent<NavMeshAgent>();
 		agent.destination = goal.position;
 		agent.speed = 1f;
+		isDead = false;
 	}
 
 	protected void UpdateSpeed(){
@@ -37,6 +38,8 @@ public class Enemy: MonoBehaviour{
 		Lives--;
 		if (Lives == 0) {
 			isDead = true;
+			anim.SetBool ("isDead", isDead);
+			StopMovement ();
 		}
 	}
 
@@ -46,7 +49,15 @@ public class Enemy: MonoBehaviour{
 			isOnFans = true;
 			StopMovement ();
 			anim.SetBool ("isOnFance", isOnFans);
-			//GetComponent<Animation>()
+			} else if (col.transform.name == "Bullet") {
+			Destroy(col.gameObject);
+			hitted ();
 		}
+	}
+	
+
+	private void Dead(){
+		GetComponent<CapsuleCollider> ().enabled = false;
+		Destroy (gameObject, 6);
 	}
 }
