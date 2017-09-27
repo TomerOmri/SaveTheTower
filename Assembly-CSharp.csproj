@@ -170,6 +170,7 @@
      <Compile Include="Assets\Scripts\GameLogic\RegularZombie.cs" />
      <Compile Include="Assets\Scripts\GameLogic\WalkTo.cs" />
      <Compile Include="Assets\Scripts\UI\AimingScript.cs" />
+     <Compile Include="Assets\Scripts\UI\FPSTEST.cs" />
      <Compile Include="Assets\Scripts\UI\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Scripts\UI\StartGameBtn.cs" />

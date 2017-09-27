@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void _fpsTest(){
-		fpsTest.text = "FPS:" + 1 / Time.deltaTime;
+		fpsTest.text = (1 / Time.deltaTime).ToString("0");
 	}
 
 
