@@ -11,6 +11,7 @@ public class Enemy: MonoBehaviour{
 	public Transform goal;
 	public bool isOnFans = false;
 	private Animator anim;
+	private float HitTime = 0;
 
 
 	void Awake () {
@@ -22,6 +23,24 @@ public class Enemy: MonoBehaviour{
 		agent.destination = goal.position;
 		agent.speed = 1f;
 		isDead = false;
+	}
+
+	private void hitFance()
+	{
+		Debug.Log ("hitFance");
+		GameManager.Instance.hitFance (Power);
+	}
+
+	void Update(){
+		if (isOnFans) {
+			//wait for 2 seconds
+			if (HitTime > 0) {
+				HitTime -= Time.deltaTime;
+			} else {//hit fance
+				hitFance ();
+				HitTime = 2;
+			}
+		}
 	}
 
 	protected void UpdateSpeed(){
