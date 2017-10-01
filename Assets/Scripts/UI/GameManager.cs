@@ -38,7 +38,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void hitFance(int damage){
-		life -= damage;
+        Debug.Log("hitFance GameManger: " + damage.ToString());
+        life -= damage;
 		lifeText.text = life.ToString ();
 		Debug.Log ("GameManger: "+ life.ToString());
 		if (life <= 0) {
@@ -46,12 +47,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+    public void AddScore(int _score)
+    {
+        score += _score;
+        scoreText.text = score.ToString();
+    }
+
+
 	void Update () {
 		_fpsTest ();
 	}

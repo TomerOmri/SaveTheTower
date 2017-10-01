@@ -7,6 +7,7 @@ public class Enemy: MonoBehaviour{
 	protected int Lives;
 	protected int Power;
 	protected int Speed;
+    protected int Points;
 	public bool isDead = false;
 	public Transform goal;
 	public bool isOnFans = false;
@@ -27,7 +28,7 @@ public class Enemy: MonoBehaviour{
 
 	private void hitFance()
 	{
-		Debug.Log ("hitFance");
+		Debug.Log ("hitFance enemy: " + Power.ToString());
 		GameManager.Instance.hitFance (Power);
 	}
 
@@ -61,7 +62,8 @@ public class Enemy: MonoBehaviour{
 			isDead = true;
 			anim.SetBool ("isDead", isDead);
 			StopMovement ();
-			Dead ();
+            GameManager.Instance.AddScore(Points);
+            Dead ();
 		}
 	}
 
