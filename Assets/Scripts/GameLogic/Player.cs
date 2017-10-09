@@ -5,7 +5,13 @@ public class Player : MonoBehaviour {
 	private GameObject gun;
 	private GameObject spawnPoint;
 	private bool isShooting;
+	[SerializeField] private AudioClip shootSound;
+	private AudioSource source;
 	[SerializeField] private GameObject _bullet;
+
+	void Awake(){
+		source = GetComponent<AudioSource> ();
+	}
 
 	void Start () {
 		gun = gameObject.transform.GetChild (0).gameObject;
@@ -34,9 +40,10 @@ public class Player : MonoBehaviour {
 	}
 		
 	void Update () {
-		Debug.DrawRay(spawnPoint.transform.position, spawnPoint.transform.forward, Color.green);
+		//Debug.DrawRay(spawnPoint.transform.position, spawnPoint.transform.forward, Color.green);
 		if (Input.anyKeyDown) {
 			if (!isShooting) {
+				source.PlayOneShot (shootSound, 1f);
 				StartCoroutine ("Shoot");
 			}
 		}

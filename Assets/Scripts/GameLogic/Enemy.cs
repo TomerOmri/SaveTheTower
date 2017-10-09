@@ -62,7 +62,6 @@ public class Enemy: MonoBehaviour{
 			isDead = true;
 			anim.SetBool ("isDead", isDead);
 			StopMovement ();
-            GameManager.Instance.AddScore(Points);
             Dead ();
 		}
 	}
@@ -86,6 +85,7 @@ public class Enemy: MonoBehaviour{
 
 	private void Dead(){
 		GetComponent<CapsuleCollider> ().enabled = false;
+		GameManager.Instance.AddScore (Points);
 		Destroy (gameObject, 6);
 	}
 }

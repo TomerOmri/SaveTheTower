@@ -168,6 +168,7 @@
      <Compile Include="Assets\Scripts\GameLogic\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameLogic\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\GameLogic\FastZombie.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\InitializeApp.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Player.cs" />
      <Compile Include="Assets\Scripts\GameLogic\RegularZombie.cs" />
      <Compile Include="Assets\Scripts\GameLogic\WalkTo.cs" />
