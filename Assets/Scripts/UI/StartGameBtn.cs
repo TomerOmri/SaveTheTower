@@ -6,16 +6,9 @@ using UnityEngine.SceneManagement;
 public class StartGameBtn : MonoBehaviour {
 	const int TheGame = 1;
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnTriggerEnter (Collider col){
+		Debug.Log ("got in");
 		SceneManager.LoadScene (TheGame);
 	}
 }

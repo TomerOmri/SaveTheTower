@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 		//Time.timeScale = 0;//stop the game
 		SaveScore (score);//save the score if need to
 		reset();//reset all
-		SceneManager.LoadScene(1);//go back to main menu
+		SceneManager.LoadScene(0);//go back to main menu
 
 	}
 
