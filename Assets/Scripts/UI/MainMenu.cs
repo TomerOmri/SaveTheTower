@@ -10,6 +10,15 @@ public class MainMenu : MonoBehaviour {
 		//GameManager.Instance.SetActiveGameCanvas (true);
 	}
 
+	public void showMainMenu(){
+		gameObject.SetActive (true);
+	}
+
+
+	public void hideMainMenu(){
+		gameObject.SetActive (false);
+	}
+
 	/*public void howToPlay(){
 		//gameObject
 	}*/

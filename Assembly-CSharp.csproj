@@ -176,6 +176,9 @@
      <Compile Include="Assets\Scripts\UI\FPSTEST.cs" />
      <Compile Include="Assets\Scripts\UI\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\ScoreBox.cs" />
+     <Compile Include="Assets\Scripts\UI\ScoreBoxBtn.cs" />
+     <Compile Include="Assets\Scripts\UI\ScoreBoxXbtn.cs" />
      <Compile Include="Assets\Scripts\UI\StartGameBtn.cs" />
      <Compile Include="Assets\Scripts\UI\VRS.cs" />
      <None Include="Assets\Plugins\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
