@@ -8,7 +8,7 @@ public class ScoreBox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		init ();
-		hideScoreBox ();
+		//hideScoreBox ();
 	}
 
 	/*void Awake(){
