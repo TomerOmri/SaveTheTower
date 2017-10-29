@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HowToXbtn : MonoBehaviour {
+public class Xbtn : MonoBehaviour {
 
 	public GameObject menuCanvas;
+	public GameObject thisCanvas;
 
 	void OnTriggerEnter (Collider col){
-		gameObject.SetActive (false);
+		Debug.Log ("xbuttn enter");
+		thisCanvas.gameObject.SetActive (false);
 		menuCanvas.gameObject.SetActive (true);
 	}
 }

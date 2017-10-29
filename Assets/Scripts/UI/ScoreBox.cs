@@ -8,24 +8,13 @@ public class ScoreBox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		init ();
-		//hideScoreBox ();
 	}
-
-	/*void Awake(){
 		
-	}*/
-
 	private void init(){
 		for (int i = 1; i <= 10; i++) {
-			Text timeText = GameObject.FindWithTag("Score" + i.ToString ()).GetComponent<Text>();
-			int temp = PlayerPrefs.GetInt("Score"+i.ToString());
-			timeText.text = (temp / 60).ToString () + ':' + temp % 60;
+			Text ScoreText = GameObject.FindWithTag("Score" + i.ToString ()).GetComponent<Text>();
+			ScoreText.text =( PlayerPrefs.GetInt ("Score" + i.ToString ())).ToString();
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	public void hideScoreBox(){

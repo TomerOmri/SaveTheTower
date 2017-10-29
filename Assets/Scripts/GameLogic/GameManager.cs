@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour {
 
 		for(int i=1; i<=10; i++)
 		{
-			if(PlayerPrefs.GetInt("Score"+i.ToString())>score)     //if cuurent score is in top 10
+			if(PlayerPrefs.GetInt("Score"+i.ToString())<score)     //if cuurent score is in top 10
 			{
 				temp=PlayerPrefs.GetInt("Score"+i.ToString());     //store the old highscore in temp varible to shift it down 
 				PlayerPrefs.SetInt("Score"+i.ToString(),score);     //store the currentscore to highscores

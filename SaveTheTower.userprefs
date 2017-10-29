@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/HowToXbtn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameLogic\GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/ScoreBox.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/ScoreBoxXbtn.cs" Line="12" Column="3" />
-      <File FileName="Assets/Scripts/UI/ScoreBoxBtn.cs" Line="4" Column="1" />
-      <File FileName="Assets/Scripts/UI/HowToXbtn.cs" Line="14" Column="1" />
+      <File FileName="Assets\Scripts\UI\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\Xbtn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\ExitBtn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\HowToXBtn1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameLogic\Player.cs" Line="26" Column="104" />
+      <File FileName="Assets\Scripts\GameLogic\GameManager.cs" Line="102" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
